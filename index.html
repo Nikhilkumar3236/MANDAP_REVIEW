@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SiyaVerse 💫</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/YOUR-KIT-HERE.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Section 0: Preloader -->
+  <div id="preloader">
+    <div class="panda-loader">
+      <img src="assets/panda.gif" alt="Loading..." />
+      <div class="pulse-circle"></div>
+      <h1>Protocol Loading...</h1>
+    </div>
+  </div>
+
+  <!-- Section 1: GLORY HOUSE -->
+  <section id="glory-house" class="section">
+    <div class="galactic-alert">GLORY HOUSE</div>
+    <h1 class="title">Welcome to SiyaVerse</h1>
+    <p class="subtitle">Where Chaos Meets Crown 👑</p>
+  </section>
+
+  <!-- Section 2: MIDWAY -->
+  <section id="midway" class="section">
+    <div class="galactic-alert">MIDWAY</div>
+    <canvas id="tunnel-canvas"></canvas>
+    <div class="midway-overlay">
+      <h2 class="title">Midway Portal</h2>
+    </div>
+  </section>
+
+  <!-- Section 3: FABLES MODULE -->
+  <section id="fables" class="section locked">
+    <div class="galactic-alert">FABLES MODULE</div>
+    <div class="glass-login-card">
+      <h2>Enter Protocol Key</h2>
+      <input type="password" id="secretKey" placeholder="🔑 Access Key..." />
+      <button onclick="checkKey()">Unlock</button>
+    </div>
+
+    <!-- Carousel Container -->
+    <div id="memory-carousel" class="carousel-container">
+      <div class="carousel">
+        <!-- ⭐ MEMORY CARDS BELOW (ALL 10) ⭐ -->
+        <!-- Memory Card 1 -->
+        <div class="memory-card" data-memory-id="1">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Crowned Spark</div>
+                <h3>PRINCESS</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-crown fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">She walks like royalty, thinks like poetry…</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>PRINCESS</h3>
+                <p>Every move she makes feels like a floating blessing. Not entitled — just chosen. Grace is her default setting.</p>
+                <div class="memory-coordinates">
+                  <span>PRINCESS</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> 01:01</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 2 -->
+        <div class="memory-card" data-memory-id="2">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Warmth Incarnate</div>
+                <h3>MOMMY</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-heart fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">Her hug cures everything. Her voice? Heaven’s ringtone…</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>MOMMY</h3>
+                <p>She doesn’t just care — she radiates healing. A rare form of emotional royalty that makes chaos sit silently.</p>
+                <div class="memory-coordinates">
+                  <span>MOMMY</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> Always</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 3 -->
+        <div class="memory-card" data-memory-id="3">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Chaos Queen</div>
+                <h3>PAGLI JII</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-face-grin-stars fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">Laughter that breaks silence. Energy that breaks rules…</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>PAGLI JII</h3>
+                <p>She’s the reason silence fears its own existence. Her energy? Legal in no country, loved in all timelines.</p>
+                <div class="memory-coordinates">
+                  <span>PAGLI JII</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> 🔥</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 4 -->
+        <div class="memory-card" data-memory-id="4">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Happy Hormone</div>
+                <h3>SILLY JII</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-face-laugh-squint fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">Giggles are her power. Confusion is her weapon.</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>SILLY JII</h3>
+                <p>She forgets names but remembers vibes. Her happiness is genuine — and dangerous to sadness.</p>
+                <div class="memory-coordinates">
+                  <span>SILLY JII</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> 24/7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 5 -->
+        <div class="memory-card" data-memory-id="5">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Sass Generator</div>
+                <h3>KAMMO JII</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-bolt fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">Style with substance. Attitude on lease.</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>KAMMO JII</h3>
+                <p>She’s the reason why mirrors have self-esteem issues. Her eyes roll better than your wifi.</p>
+                <div class="memory-coordinates">
+                  <span>KAMMO JII</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> 💅</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 6 -->
+        <div class="memory-card" data-memory-id="6">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Unshaken Throne</div>
+                <h3>QUEEN</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-chess-queen fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">Commanding. Calm. Celestial.</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>QUEEN</h3>
+                <p>She doesn't raise her voice — her presence is loud enough. Loyalty kneels before her aura.</p>
+                <div class="memory-coordinates">
+                  <span>QUEEN</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> 👑</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 7: SUPRIYAA JII -->
+        <div class="memory-card" data-memory-id="7">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Strategist of Souls</div>
+                <h3>SUPRIYAA JII</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-compass-drafting fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">Ambition wrapped in elegance — boss energy only…</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>SUPRIYAA JII</h3>
+                <p>She builds dreams with blueprints no one else can see. Her eyes see patterns, her mind balances galaxies. She doesn’t just plan — she manifests.</p>
+                <div class="memory-coordinates">
+                  <span>SUPRIYAA JII</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> NOW</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 8: DEVI JII -->
+        <div class="memory-card" data-memory-id="8">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Silent Flame</div>
+                <h3>DEVI JII</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-fire fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">Naari ka sabse pavitra roop jab modern swag mein aaye…</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>DEVI JII</h3>
+                <p>She is devotion in motion, grace in every breath. She’s the echo of ancient hymns in a neon world. Her existence itself is a blessing unwrapped slowly.</p>
+                <div class="memory-coordinates">
+                  <span>DEVI Jii</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> NOW</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 9: KALESHI -->
+        <div class="memory-card" data-memory-id="9">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Beautiful Storm</div>
+                <h3>KALESHI</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-bomb fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">Bold, blunt & beautiful — chaos in control…</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>KALESHI</h3>
+                <p>She won’t spare you, and you’ll thank her later. She cuts through fake with elegance. Her rage is sacred, her silence — fatal. She doesn’t burn bridges, she floats over ashes.</p>
+                <div class="memory-coordinates">
+                  <span>KALESHI MOMMY</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> NOW</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Memory Card 10: SIYA JII -->
+        <div class="memory-card" data-memory-id="10">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <div class="memory-date"> The Divine Core</div>
+                <h3>SIYA JII</h3>
+                <div class="memory-image">
+                  <i class="fa-solid fa-star-of-life fa-3x"></i>
+                  <div class="glitch-effect"></div>
+                </div>
+                <p class="memory-preview">A divine presence — calm in storms, storm in calm…</p>
+                <div class="card-glow"></div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-content">
+                <h3>SIYA JII</h3>
+                <p>Not a name — an embodiment. She’s the script of stars and the whisper of gods. Loving her is not a phase — it’s a lifelong pilgrimage. She is both the war and the temple.</p>
+                <div class="memory-coordinates">
+                  <span>Meri SIYA JII</span>
+                  <span class="time-stamp"><i class="fa-regular fa-clock"></i> NOW</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⭐ END MEMORY CARDS -->
+      </div>
+
+      <!-- Controls -->
+      <div class="carousel-controls">
+        <div id="prev-btn" class="control-btn"><i class="fas fa-chevron-left"></i></div>
+        <div id="next-btn" class="control-btn"><i class="fas fa-chevron-right"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section id="thank-you" class="section">
+    <div class="galactic-alert">CORE</div>
+    <h2 class="title">🌸 part of it now 🌸</h2>
+    <p>Thank you for walking...</p>
+  </section>
+
+  <!-- Audio -->
+  <audio id="bgSound" src="perfect.mp3" preload="auto"></audio>
+
+  <!-- Signature -->
+  <div id="signature" class="glass-signature">Created by <span>NiKKi</span></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      const ping = new Audio("perfect.mp3");
+      ping.volume = 0.1;
+      ping.play();
+      preloader.classList.add("fade-out");
+      setTimeout(() => preloader.style.display = "none", 1500);
+    });
+  </script>
+</body>
+</html>
