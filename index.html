@@ -2,21 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Review Redirect</title>
-  <script src="comments.js"></script>
+  <title>MANDAP REVIEW 🔐</title>
   <script>
-    function getRandomComment() {
-      return comments[Math.floor(Math.random() * comments.length)];
-    }
+    (function(){
+      const signature = "© Nikki Bhai | Do Not Copy";
+      const domain = "nikhilkumar3236.github.io";
+      const trap = () => { while(true) { console.log("🔥 Caught Copycat"); alert("Invalid Domain ❌"); } };
 
-    window.onload = function () {
-      const comment = getRandomComment();
-      const url = `https://search.google.com/local/writereview?placeid=ChIJ5-CzXl5Z7TkRn3HUc0uGJRE&review_text=${encodeURIComponent(comment)}`;
-      window.location.href = url;
-    };
+      // Trap 1: Domain Check
+      if (location.hostname !== domain) trap();
+
+      // Trap 2: Protocol Check
+      if (location.protocol !== "https:") trap();
+
+      // Trap 3: Length Check
+      if (location.href.length < 20) trap();
+
+      // Hidden signature check (confuses copiers)
+      if (!signature.includes("Nikki")) trap();
+
+      const comments = [
+        "Kurta pajama fitting was superb! Loved the stitching.",
+        "Blazer design was amazing and made me feel royal.",
+        "Service was top-notch and very polite staff.",
+        "Sherwani gave total king vibes at my wedding!",
+        "Loved the indo-western mix style!",
+        "The Bundi jacket was a total hit.",
+        "Great experience, awesome fabric quality.",
+        "Perfect tailoring for my sherwani.",
+        "Customer service is truly premium here.",
+        "Stylish blazer with perfect fitting.",
+        "Traditional touch with modern finish!",
+        "Received so many compliments for the outfit.",
+        "Delivery on time and made to perfection.",
+        "Kurta was elegant and very comfortable.",
+        "Royal look and elegant fabric!",
+        "The measurements were extremely accurate.",
+        "Loved the details on the Bundi.",
+        "Blazer was sharp and classy.",
+        "Best experience for ethnic wear.",
+        "Highly recommended for wedding styling!"
+        // You can extend this to 10K comments safely if you like
+      ];
+
+      const getRandom = () => comments[Math.floor(Math.random() * comments.length)];
+      const url = "https://search.google.com/local/writereview?placeid=ChIJ5-CzXl5Z7TkRn3HUc0uGJRE&review_text=" + encodeURIComponent(getRandom());
+
+      setTimeout(() => {
+        console.log("🛡️ Verified - Redirecting");
+        window.location.href = url;
+      }, 150);
+    })();
   </script>
 </head>
 <body>
-  <h2>Redirecting to review page...</h2>
+  <h2>🔁 Redirecting securely to review page...</h2>
+  <!-- 🛡️ Built & Locked by Nikki Bhai | Report copies to 404@deserved.punishment -->
 </body>
 </html>
