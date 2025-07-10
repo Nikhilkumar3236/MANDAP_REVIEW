@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Review Redirect</title>
+  <script src="comments.js"></script>
+  <script>
+    function getRandomComment() {
+      return comments[Math.floor(Math.random() * comments.length)];
+    }
+
+    window.onload = function () {
+      const comment = getRandomComment();
+      const url = `https://search.google.com/local/writereview?placeid=ChIJ5-CzXl5Z7TkRn3HUc0uGJRE&review_text=${encodeURIComponent(comment)}`;
+      window.location.href = url;
+    };
+  </script>
+</head>
+<body>
+  <h2>Redirecting to review page...</h2>
+</body>
+</html>
