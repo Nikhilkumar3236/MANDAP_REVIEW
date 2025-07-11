@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mandap Review Gate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rate Your Mandap Experience</h1>
+    <p class="sub">Your words help us grow 👑</p>
+    
+    <div class="stars" id="starRating">
+      <span data-rating="1">★</span>
+      <span data-rating="2">★</span>
+      <span data-rating="3">★</span>
+      <span data-rating="4">★</span>
+      <span data-rating="5">★</span>
+    </div>
+
+    <button id="submitRating">Submit Rating</button>
+    
+    <div id="thankYouUnder3" class="hidden">
+      <h2>🙏 Thank you for your feedback!</h2>
+      <p>We’ll strive to do better. Your input means a lot 💫</p>
+    </div>
+
+    <div id="unlockReview" class="hidden">
+      <h2>You're Amazing! 🔓</h2>
+      <p>It just takes a second — copy any of these & paste on Google Review!</p>
+      
+      <div class="comments" id="commentList">
+        <!-- Random 5 comments will be injected here -->
+      </div>
+
+      <button id="goToGoogleReview">🌐 Post Review on Google</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
